@@ -1,0 +1,57 @@
+Call:
+glm(formula = hasError ~ elements + activities + events + startEvents + 
+    endEvents + gateways + lanesAndPools + sequenceFlows, family = binomial(), 
+    data = training_data)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.7926   0.0017   0.2104   0.5879   3.1547  
+
+Coefficients:
+               Estimate Std. Error z value Pr(>|z|)    
+(Intercept)   -1.096666   0.050069 -21.903  < 2e-16 ***
+elements       0.067229   0.005568  12.074  < 2e-16 ***
+activities     0.166095   0.018763   8.852  < 2e-16 ***
+events         0.367895   0.026888  13.682  < 2e-16 ***
+startEvents   -0.524280   0.039320 -13.334  < 2e-16 ***
+endEvents     -0.148990   0.041046  -3.630 0.000284 ***
+gateways       0.281567   0.029111   9.672  < 2e-16 ***
+lanesAndPools  0.189479   0.013416  14.123  < 2e-16 ***
+sequenceFlows -0.194458   0.016074 -12.098  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 15824  on 15049  degrees of freedom
+Residual deviance: 10860  on 15041  degrees of freedom
+AIC: 10878
+
+Number of Fisher Scoring iterations: 8
+
+Confusion Matrix and Statistics
+
+          Reference
+Prediction FALSE TRUE
+     FALSE  2661  479
+     TRUE    267  355
+                                          
+               Accuracy : 0.8017          
+                 95% CI : (0.7886, 0.8143)
+    No Information Rate : 0.7783          
+    P-Value [Acc > NIR] : 0.0002545       
+                                          
+                  Kappa : 0.3679          
+                                          
+ Mcnemar's Test P-Value : 1.116e-14       
+                                          
+            Sensitivity : 0.9088          
+            Specificity : 0.4257          
+         Pos Pred Value : 0.8475          
+         Neg Pred Value : 0.5707          
+             Prevalence : 0.7783          
+         Detection Rate : 0.7073          
+   Detection Prevalence : 0.8347          
+      Balanced Accuracy : 0.6672          
+                                          
+       'Positive' Class : FALSE           
